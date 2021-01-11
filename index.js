@@ -1,6 +1,7 @@
 const http = require('http')
 const express = require('express')
 const socketio = require('socket.io')
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 const server = http.Server(app);
@@ -47,4 +48,4 @@ io.on('connection', (socket) => {
   })
 })
 
-server.listen(80, () => console.log('Listening on 80'))
+server.listen(PORT, () => console.log('Listening...'))
